@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            /* Bluish gradient */
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 5px solid #007B8F;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #dff6ff;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 0;
+            background-color: #e9f7fe;
+        }
+
+        #about h2 {
+            color: #2f80ed;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Skills Section */
+        #skills {
+            padding: 50px 0;
+        }
+
+        #skills h2 {
+            color: #2f80ed;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        #skills li {
+            font-size: 1.1rem;
+            color: #333;
+            background-color: #e0f7fa;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        /* Education Section */
+        #education {
+            padding: 50px 0;
+            background-color: #daf5f9;
+        }
+
+        #education h2 {
+            color: #2f80ed;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #education p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #2f80ed;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #1c5ab5;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 50px 0;
+        }
+
+        #projects h2 {
+            color: #2f80ed;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #projects ul {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        #projects li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        #projects a {
+            color: #2f80ed;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        #projects a:hover {
+            color: #1c5ab5;
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px 0;
+            background-color: #e9f7fe;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: #2f80ed;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .contact-info a {
+            display: inline-block;
+            margin: 10px 20px;
+            font-size: 1.2rem;
+            color: #007B8F;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #005f6f;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #daf5f9;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: #333;
+            font-size: 1rem;
+        }
+
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+
+            #about h2,
+            #skills h2,
+            #education h2,
+            #projects h2,
+            #contact h2 {
+                font-size: 1.8rem;
+            }
+
+            .download-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            #skills li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+
+            #about h2,
+            #skills h2,
+            #education h2,
+            #projects h2,
+            #contact h2 {
+                font-size: 1.5rem;
+            }
+
+            .download-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            #skills li {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Discover my journey in tech and the projects I've worked on.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Charles Kioko. I'm a Web Developer, I love to create beautiful and functional websites.I enjoy
+                solving problems through technology and continuously learning new frameworks and
+                languages to improve my skills.</p>
+        </div>
+    </section>
+
+    <!-- Programming Languages Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Programming Languages & Frameworks</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <p>Bachelor's Degree in Computer Science from The Technical University of Kenya</p>
+            <a href="CV.pdf" download="CV.pdf" class="download-btn">Download My CV</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/YourGitHubProject" target="_blank">Project 1</a> -Personal Website
+                </li>
+                <li>
+                    <a href="https://github.com/YourGitHubProject2" target="_blank">Project 2</a> -E-Commerce Platform
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me through any of the following platforms:</p>
+
+            <div class="contact-info">
+                <a href="tel:+254706792019" target="_blank">
+                    <i class="fas fa-phone"></i>+254706792019
+                </a>
+                <a href="charleskioko702@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i> charleskioko702@gmail.com
+                </a>
+                <a href="https://wa.me/254706792019" target="#">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.facebook.com/yourprofile" target="#">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Charles Kioko. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
